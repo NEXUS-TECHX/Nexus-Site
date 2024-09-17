@@ -1,0 +1,36 @@
+body {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+.navbar {
+    background-color: #ff6600;
+}
+.navbar-brand, .nav-link {
+    color: #fff !important;
+}
+.jumbotron {
+    background-color: #ff6600;
+    color: #fff;
+    padding: 4rem 2rem;
+    border-radius: 0;
+}
+.btn-custom {
+    background-color: #ff6600;
+    color: #fff;
+    border-radius: 30px;
+}
+.btn-custom:hover {
+    background-color: #e65c00;
+    color: #fff;
+}
+.feature-card {
+    background-color: #262626;
+    border: none;
+    color: #fff;
+}
+footer {
+    background-color: #000;
+    padding: 20px 0;
+    color: #fff;
+    text-align: center;
+}
