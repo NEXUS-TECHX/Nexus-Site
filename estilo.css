@@ -1,36 +1,133 @@
 body {
     background-color: #1a1a1a;
     color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
 }
+
+main {
+    flex: 1; /* Faz o conteúdo principal ocupar o espaço disponível */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 .navbar {
     background-color: #ff6600;
 }
+
 .navbar-brand, .nav-link {
     color: #fff !important;
 }
+
+/* Estilo para os itens da barra de navegação */
+.nav-link {
+    position: relative;
+    display: inline-block;
+    padding: 8px 16px;
+    color: #fff; /* Cor padrão do texto */
+    border: 2px solid #ffffff00; /* Define a cor da borda como branco */
+    border-radius: 20px; /* Arredonda as bordas */
+    transition: all 0.3s ease; /* Transição suave para as mudanças */
+    background-color: transparent; /* Fundo transparente por padrão */
+    text-decoration: none; /* Remove sublinhado */
+}
+
+/* Efeito hover para os itens da barra de navegação */
+.nav-link:hover {
+    color: #ff6600; /* Muda a cor do texto ao passar o mouse */
+    border-color: #ff6600; /* Muda a cor da borda para laranja ao passar o mouse */
+    background-color: #ffffff31; /* Muda o fundo para branco ao passar o mouse */
+    border: 2px solid #fff; /* Define a cor da borda como branco */
+    border-radius: 20px; /* Arredonda as bordas */
+}
+
+
+
 .jumbotron {
     background-color: #ff6600;
     color: #fff;
     padding: 4rem 2rem;
     border-radius: 0;
 }
+
+/* Estilo da animação de digitação */
+.typing-title, .typing-subtitle, .typing-button {
+    border-right: 2px solid #fff; /* Cursor piscando */
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: typing 3s steps(30) forwards, blink 0.5s step-end infinite alternate;
+}
+
+/* Animação de digitação */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Animação de piscar o cursor */
+@keyframes blink {
+    from { border-color: transparent; }
+    to { border-color: white; }
+}
+
+/* Estilo do botão customizado */
 .btn-custom {
-    background-color: #ff6600;
-    color: #fff;
-    border-radius: 30px;
+    display: inline-block; /* Garante que o botão não ocupe toda a largura disponível */
+    padding: 10px 20px; /* Ajusta o padding para um tamanho adequado */
+    color: #fff; /* Define a cor do texto */
+    border: 2px solid #fff; /* Define a borda branca */
+    border-radius: 30px; /* Arredonda as bordas */
+    background-color: transparent; /* Mantém o fundo transparente */
+    transition: all 0.3s ease; /* Suaviza a transição ao passar o mouse */
+    text-decoration: none; /* Remove o sublinhado */
+    cursor: pointer; /* Mostra o cursor de ponteiro ao passar o mouse */
+    max-width: 200px; /* Define a largura máxima para o botão */
+    text-align: center; /* Centraliza o texto dentro do botão */
+    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
 }
+
+/* Efeito hover para o botão */
 .btn-custom:hover {
-    background-color: #e65c00;
-    color: #fff;
+    color: #ff6600; /* Muda a cor do texto ao passar o mouse */
+    border-color: #ff6600; /* Muda a cor da borda para laranja */
+    background-color: #fff; /* Altera o fundo para branco ao passar o mouse */
 }
+
 .feature-card {
     background-color: #262626;
     border: none;
     color: #fff;
+    transition: transform 0.3s ease;
 }
+
+.feature-card:hover {
+    transform: scale(1.05); /* Aumenta o tamanho do card em 5% */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra para dar mais destaque */
+}
+
 footer {
     background-color: #000;
     padding: 20px 0;
     color: #fff;
     text-align: center;
+    position: relative;
 }
+
+
+.animated-bg {
+    background: linear-gradient(-45deg, #ff6600, #ffcc00, #ff6600, #ffcc00);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
