@@ -75,6 +75,18 @@ html {
     to { border-color: white; }
 }
 
+.tamanhologo {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+  }
+
+.tamanhologo:hover {
+    transform: scale(1.2); /* Aumenta o tamanho do card em 5% */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra para dar mais destaque */
+}
+
+
 /* Estilo do botão customizado */
 .btn-custom {
     display: inline-block; /* Garante que o botão não ocupe toda a largura disponível */
