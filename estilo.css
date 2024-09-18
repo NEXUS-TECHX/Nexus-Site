@@ -170,3 +170,29 @@ footer {
     scrollbar-width: thin; /* Define a largura da barra como "fina" */
     scrollbar-color: #ff6600 #1a1a1a; /* Cor do thumb e do track */
 }
+
+/* Estilo geral para a seção de depoimentos */
+.blockquote {
+    background-color: #333; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+    margin-bottom: 20px; /* Espaçamento inferior entre os blocos */
+    text-align: center; /* Centraliza o texto no bloco */
+    height: 100%; /* Ajusta a altura dos blocos para serem iguais */
+}
+
+/* Estilo para o texto de rodapé (quem fez o depoimento) */
+.blockquote-footer {
+    color: #ff6600; /* Cor laranja para destaque */
+    font-size: 1rem; /* Tamanho do texto */
+    margin-top: 10px; /* Espaçamento entre o depoimento e o autor */
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    .blockquote {
+        margin-bottom: 20px;
+    }
+}
