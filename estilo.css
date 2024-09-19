@@ -143,33 +143,43 @@ html {
     box-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff;
     border: 2px solid #ff00ff; /* Muda a cor da borda no hover */
 }
+
+/* Ajustes para dispositivos móveis */
 @media (max-width: 768px) {
     .glitch-title {
-        font-size: 2.5rem; /* Diminui o tamanho do título em telas menores */
+        font-size: 2.5rem; /* Tamanho ajustado do título */
     }
     .glitch-subtitle {
-        font-size: 1rem; /* Diminui o tamanho do subtítulo */
+        font-size: 1.2rem; /* Tamanho ajustado do subtítulo */
     }
     .glitch-button {
-        font-size: 1.2rem; /* Ajusta o tamanho da fonte do botão */
-        padding: 8px 20px; /* Ajusta o padding do botão */
+        font-size: 1.2rem; /* Tamanho ajustado do botão */
+        padding: 8px 20px; /* Padding ajustado */
     }
 }
 
-/* Ajustes para telas ainda menores (smartphones) */
+@keyframes neon-glow {
+    0% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff;
+    }
+    100% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 30px #ff00ff, 0 0 50px #ff00ff, 0 0 80px #ff00ff;
+    }
+}
+
+/* Ajustes para telas menores */
 @media (max-width: 576px) {
     .glitch-title {
-        font-size: 2rem; /* Ainda menor para smartphones */
+        font-size: 2rem;
     }
     .glitch-subtitle {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
     .glitch-button {
         font-size: 1rem;
-        padding: 6px 15px; /* Mais compacto */
+        padding: 6px 15px;
     }
 }
-
 
 .tamanhologo {
     width: 50px;
