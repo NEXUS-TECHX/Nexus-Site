@@ -196,3 +196,35 @@ footer {
         margin-bottom: 20px;
     }
 }
+
+/* Estilo para o contêiner do Instagram */
+.instagram-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa; /* Fundo claro ao redor dos embeds */
+    padding: 10px; /* Espaçamento ao redor do conteúdo */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    height: 450px; /* Definindo uma altura fixa */
+}
+
+/* Ajuste de largura e altura para o iframe */
+.instagram-container iframe {
+    width: 100%; /* O iframe ocupará toda a largura disponível */
+    height: 100%; /* O iframe ocupará toda a altura disponível */
+    border-radius: 8px; /* Bordas arredondadas nos vídeos */
+    border: none; /* Remove a borda do iframe */
+}
+
+/* Centraliza os elementos na linha */
+.row {
+    display: flex;
+    justify-content: space-around; /* Distribui os elementos igualmente */
+    align-items: center;
+}
+
+/* Adicionando espaçamento entre os blocos */
+.row > div {
+    margin-bottom: 20px;
+}
