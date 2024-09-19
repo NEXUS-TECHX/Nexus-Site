@@ -53,9 +53,9 @@
 
     <!-- Jumbotron -->
     <div class="jumbotron text-center">
-        <h1 class="display-4 glitch-title">Bem-vindo à Nexus Tech</h1>
-        <p class="lead glitch-subtitle">A tecnologia ao seu alcance.</p>
-        <a href="#" class="btn btn-custom btn-lg glitch-button">Saiba Mais</a>
+        <h1 class="glitch-title">Bem-vindo à Nexus Tech</h1>
+        <p class="glitch-subtitle">A tecnologia ao seu alcance.</p>
+        <a href="#" class="btn glitch-button">Saiba Mais</a>
     </div>
     
     
@@ -300,7 +300,35 @@
             path: 'path/to/animation.json' // Caminho para seu arquivo de animação Lottie
         });
     </script>
-    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    // Seleciona os elementos que devem ter a animação aplicada
+    const elementsToAnimate = document.querySelectorAll('.glitch-title, .glitch-subtitle, .glitch-button');
+
+    // Função que adiciona a animação quando o elemento entra na viewport
+    const addAnimation = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Adiciona a classe de animação quando o elemento entra na visualização
+                entry.target.classList.add('glitch-visible');
+                entry.target.classList.add('glitch-animate');
+                // Para de observar o elemento, já que ele já está visível
+                observer.unobserve(entry.target);
+            }
+        });
+    };
+
+    // Configura o Intersection Observer
+    const observer = new IntersectionObserver(addAnimation, {
+        root: null,
+        threshold: 0.1 // Quando 10% do elemento estiver visível
+    });
+
+    // Observa todos os elementos
+    elementsToAnimate.forEach(element => observer.observe(element));
+});
+
+    </script>
     
     
 </body>

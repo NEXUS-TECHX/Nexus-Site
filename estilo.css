@@ -58,37 +58,49 @@ html {
 }
 
 /* Estilos gerais para desktop (mantendo o glow pulsante) */
+/* Título com efeito glow */
 .glitch-title {
     position: relative;
     color: #fff;
     font-family: 'Orbitron', sans-serif;
-    font-size: 4rem;
-    animation: neon-flicker 1.5s infinite;
+    font-size: 4rem; /* Tamanho original */
+    animation: neon-flicker 1.5s infinite; /* Animação neon */
 }
 
-/* Efeito glitch para o subtítulo */
+/* Subtítulo com efeito neon */
 .glitch-subtitle {
     position: relative;
     font-family: 'Orbitron', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Tamanho original */
     color: #fff;
     animation: glitch 2s infinite;
 }
 
-/* Efeito neon no botão */
+/* Botão com efeito neon */
 .glitch-button {
-    border: 2px solid #fff;
-    border-radius: 50px;
-    padding: 10px 30px;
-    color: #f5f4f4;
-    background-color: transparent;
+    border: 2px solid #fff; /* Mantém a borda */
+    border-radius: 50px; /* Borda arredondada */
+    border-color: white;
+    padding: 10px 30px; /* Ajuste de espaçamento */
+    color: #f5f4f4; /* Cor do texto */
+    background-color: transparent; /* Fundo transparente */
     position: relative;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    transition: all 0.3s ease-in-out;
-    animation: neon-flicker 1.5s infinite;
+    font-family: 'Orbitron', sans-serif; /* Fonte Orbitron */
+    font-size: 1.5rem; /* Tamanho da fonte */
+    text-transform: uppercase; /* Caixa alta */
+    letter-spacing: 2px; /* Espaçamento entre letras */
+    transition: all 0.3s ease-in-out; /* Suavização de transições */
+    animation: neon-flicker 1.5s infinite; /* Animação neon */
+    
+}
+
+.glitch-visible {
+    opacity: 1; /* Quando visível */
+}
+
+/* Animações (serão aplicadas via JavaScript) */
+.glitch-animate {
+    animation: neon-flicker 1.5s infinite, glitch 2s infinite; /* Animações originais */
 }
 
 /* Animação de glitch (título e subtítulo) */
@@ -136,39 +148,20 @@ html {
     }
 }
 
-/* Botão com efeito hover */
-.glitch-button:hover {
-    color: #fff;
-    background-color: #ff00ff;
-    box-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff;
-    border: 2px solid #ff00ff;
-}
-
-/* Ajustes para dispositivos móveis (animação mais leve) */
+/* Animação mais leve para dispositivos móveis */
 @media (max-width: 768px) {
-    .glitch-title {
-        font-size: 2.5rem; /* Tamanho ajustado do título */
-        animation: neon-flicker-light 3s infinite; /* Animação mais leve */
-    }
-    .glitch-subtitle {
-        font-size: 1.2rem; /* Tamanho ajustado do subtítulo */
-        animation: glitch-light 3s infinite; /* Animação mais leve */
-    }
-    .glitch-button {
-        font-size: 1.2rem; /* Tamanho ajustado do botão */
-        padding: 8px 20px; /* Padding ajustado */
-        animation: neon-flicker-light 3s infinite; /* Animação mais leve */
+    .glitch-animate {
+        animation: neon-flicker-light 3s infinite, glitch-light 3s infinite; /* Animação mais leve */
     }
 }
 
-/* Animação de glitch mais leve */
+/* Animação mais leve para dispositivos móveis */
 @keyframes glitch-light {
     0% { transform: translate(0); opacity: 1; }
     50% { transform: translate(-1px, 1px); opacity: 0.9; }
     100% { transform: translate(0); opacity: 1; }
 }
 
-/* Animação neon flicker mais leve */
 @keyframes neon-flicker-light {
     0%, 50%, 100% {
         text-shadow: 0 0 5px rgba(255, 255, 255, 0.2), 
@@ -184,18 +177,43 @@ html {
 @media (max-width: 576px) {
     .glitch-title {
         font-size: 2rem;
-        animation: neon-flicker-light 2s infinite;
     }
     .glitch-subtitle {
         font-size: 1rem;
-        animation: glitch-light 2s infinite;
     }
     .glitch-button {
         font-size: 1rem;
         padding: 6px 15px;
-        animation: neon-flicker-light 2s infinite;
     }
 }
+
+
+
+/* Animação neon flicker */
+@keyframes neon-flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow:
+            0 0 5px rgba(255, 255, 255, 0.2),
+            0 0 10px rgba(255, 255, 255, 0.3),
+            0 0 20px rgba(255, 255, 255, 0.4),
+            0 0 40px #ff00ff,
+            0 0 60px #ff00ff,
+            0 0 80px #ff00ff,
+            0 0 100px #ff00ff;
+    }
+    20%, 24%, 55% {
+        text-shadow: none;
+    }
+}
+
+/* Efeito hover para o botão */
+.glitch-button:hover {
+    color: #fff;
+    background-color: #ff00ff; /* Fundo neon ao passar o mouse */
+    box-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff; /* Glow neon */
+    border: 2px solid #ff00ff; /* Altera a borda no hover */
+}
+
 
 
 .tamanhologo {
