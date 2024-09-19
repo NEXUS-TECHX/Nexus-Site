@@ -57,7 +57,7 @@ html {
     position: relative;
 }
 
-/* Efeito glitch para o título */
+/* Estilos gerais para desktop (mantendo o glow pulsante) */
 .glitch-title {
     position: relative;
     color: #fff;
@@ -77,9 +77,9 @@ html {
 
 /* Efeito neon no botão */
 .glitch-button {
-    border: 2px solid #fff; /* Ajuste a espessura da borda */
-    border-radius: 50px; /* Borda arredondada */
-    padding: 10px 30px; /* Espaçamento interno ajustado */
+    border: 2px solid #fff;
+    border-radius: 50px;
+    padding: 10px 30px;
     color: #f5f4f4;
     background-color: transparent;
     position: relative;
@@ -139,47 +139,64 @@ html {
 /* Botão com efeito hover */
 .glitch-button:hover {
     color: #fff;
-    background-color: #ff00ff; /* Cor de fundo neon ao passar o mouse */
+    background-color: #ff00ff;
     box-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff;
-    border: 2px solid #ff00ff; /* Muda a cor da borda no hover */
+    border: 2px solid #ff00ff;
 }
 
-/* Ajustes para dispositivos móveis */
+/* Ajustes para dispositivos móveis (animação mais leve) */
 @media (max-width: 768px) {
     .glitch-title {
         font-size: 2.5rem; /* Tamanho ajustado do título */
+        animation: neon-flicker-light 3s infinite; /* Animação mais leve */
     }
     .glitch-subtitle {
         font-size: 1.2rem; /* Tamanho ajustado do subtítulo */
+        animation: glitch-light 3s infinite; /* Animação mais leve */
     }
     .glitch-button {
         font-size: 1.2rem; /* Tamanho ajustado do botão */
         padding: 8px 20px; /* Padding ajustado */
+        animation: neon-flicker-light 3s infinite; /* Animação mais leve */
     }
 }
 
-@keyframes neon-glow {
-    0% {
-        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff;
-    }
-    100% {
-        text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 30px #ff00ff, 0 0 50px #ff00ff, 0 0 80px #ff00ff;
+/* Animação de glitch mais leve */
+@keyframes glitch-light {
+    0% { transform: translate(0); opacity: 1; }
+    50% { transform: translate(-1px, 1px); opacity: 0.9; }
+    100% { transform: translate(0); opacity: 1; }
+}
+
+/* Animação neon flicker mais leve */
+@keyframes neon-flicker-light {
+    0%, 50%, 100% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.2), 
+                     0 0 10px rgba(255, 255, 255, 0.3),
+                     0 0 20px rgba(255, 255, 255, 0.4), 
+                     0 0 40px #ff00ff, 
+                     0 0 60px #ff00ff, 
+                     0 0 80px #ff00ff;
     }
 }
 
-/* Ajustes para telas menores */
+/* Ajustes para telas muito pequenas (smartphones) */
 @media (max-width: 576px) {
     .glitch-title {
         font-size: 2rem;
+        animation: neon-flicker-light 2s infinite;
     }
     .glitch-subtitle {
         font-size: 1rem;
+        animation: glitch-light 2s infinite;
     }
     .glitch-button {
         font-size: 1rem;
         padding: 6px 15px;
+        animation: neon-flicker-light 2s infinite;
     }
 }
+
 
 .tamanhologo {
     width: 50px;
@@ -310,12 +327,30 @@ footer {
     .instagram-container {
         height: 350px; /* Ajuste a altura para telas menores */
     }
+    .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Alinha os posts no centro para tablets */
+    }
+    .col-md-4 {
+        width: 100%; /* Cada post ocupará 100% da largura da tela */
+        margin-bottom: 20px; /* Espaçamento entre os posts */
+    }
 }
 
 /* Ajustes para smartphones */
 @media (max-width: 576px) {
     .instagram-container {
         height: 300px; /* Altura reduzida para smartphones */
+    }
+    .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Alinha os posts no centro para smartphones */
+    }
+    .col-md-4 {
+        width: 100%; /* Cada post ocupará 100% da largura da tela */
+        margin-bottom: 15px; /* Espaçamento entre os posts */
     }
 }
 
