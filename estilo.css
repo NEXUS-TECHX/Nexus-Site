@@ -48,32 +48,102 @@ html {
 
 
 .jumbotron {
-    background-color: #ff6600;
+    background-color: #ff6600; /* Mantém o fundo laranja */
     color: #fff;
     padding: 4rem 2rem;
     border-radius: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
 }
 
-/* Estilo da animação de digitação */
-.typing-title, .typing-subtitle, .typing-button {
-    border-right: 2px solid #fff; /* Cursor piscando */
-    white-space: nowrap;
-    overflow: hidden;
-    display: inline-block;
-    animation: typing 3s steps(30) forwards, blink 0.5s step-end infinite alternate;
+/* Efeito glitch para o título */
+.glitch-title {
+    position: relative;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 4rem;
+    animation: neon-flicker 1.5s infinite;
 }
 
-/* Animação de digitação */
-@keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
+/* Efeito glitch para o subtítulo */
+.glitch-subtitle {
+    position: relative;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+    animation: glitch 2s infinite;
 }
 
-/* Animação de piscar o cursor */
-@keyframes blink {
-    from { border-color: transparent; }
-    to { border-color: white; }
+/* Efeito neon no botão */
+.glitch-button {
+    border: 2px solid #fff; /* Ajuste a espessura da borda */
+    border-radius: 50px; /* Borda arredondada */
+    padding: 10px 30px; /* Espaçamento interno ajustado */
+    color: #f5f4f4;
+    background-color: transparent;
+    position: relative;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease-in-out;
+    animation: neon-flicker 1.5s infinite;
 }
+
+/* Animação de glitch (título e subtítulo) */
+@keyframes glitch {
+    0% {
+        transform: translate(0);
+        opacity: 1;
+    }
+    20% {
+        transform: translate(-2px, 2px);
+        opacity: 0.8;
+    }
+    40% {
+        transform: translate(2px, -2px);
+        opacity: 0.6;
+    }
+    60% {
+        transform: translate(-1px, 1px);
+        opacity: 0.9;
+    }
+    80% {
+        transform: translate(1px, -1px);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+/* Animação neon flicker (brilho do botão e título) */
+@keyframes neon-flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow: 
+          0 0 5px rgba(255, 255, 255, 0.2), 
+          0 0 10px rgba(255, 255, 255, 0.3), 
+          0 0 20px rgba(255, 255, 255, 0.4), 
+          0 0 40px #ff00ff, 
+          0 0 60px #ff00ff, 
+          0 0 80px #ff00ff, 
+          0 0 100px #ff00ff;
+    }
+    20%, 24%, 55% {
+        text-shadow: none;
+    }
+}
+
+/* Botão com efeito hover */
+.glitch-button:hover {
+    color: #fff;
+    background-color: #ff00ff; /* Cor de fundo neon ao passar o mouse */
+    box-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff;
+    border: 2px solid #ff00ff; /* Muda a cor da borda no hover */
+}
+
 
 .tamanhologo {
     width: 50px;
@@ -84,30 +154,6 @@ html {
 .tamanhologo:hover {
     transform: scale(1.2); /* Aumenta o tamanho do card em 5% */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra para dar mais destaque */
-}
-
-
-/* Estilo do botão customizado */
-.btn-custom {
-    display: inline-block; /* Garante que o botão não ocupe toda a largura disponível */
-    padding: 10px 20px; /* Ajusta o padding para um tamanho adequado */
-    color: #fff; /* Define a cor do texto */
-    border: 2px solid #fff; /* Define a borda branca */
-    border-radius: 30px; /* Arredonda as bordas */
-    background-color: transparent; /* Mantém o fundo transparente */
-    transition: all 0.3s ease; /* Suaviza a transição ao passar o mouse */
-    text-decoration: none; /* Remove o sublinhado */
-    cursor: pointer; /* Mostra o cursor de ponteiro ao passar o mouse */
-    max-width: 200px; /* Define a largura máxima para o botão */
-    text-align: center; /* Centraliza o texto dentro do botão */
-    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
-}
-
-/* Efeito hover para o botão */
-.btn-custom:hover {
-    color: #ff6600; /* Muda a cor do texto ao passar o mouse */
-    border-color: #ff6600; /* Muda a cor da borda para laranja */
-    background-color: #fff; /* Altera o fundo para branco ao passar o mouse */
 }
 
 .feature-card {
