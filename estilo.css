@@ -297,6 +297,22 @@ footer {
     height: 100%; /* O iframe ocupará toda a altura disponível */
     border-radius: 8px; /* Bordas arredondadas nos vídeos */
     border: none; /* Remove a borda do iframe */
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .instagram-container iframe{
+        height: 350px; /* Ajuste a altura das postagens */
+        margin-bottom: 15px;
+    }
+}
+
+/* Ajustes para telas muito pequenas (smartphones) */
+@media (max-width: 576px) {
+    .instagram-container iframe {
+        height: 300px; /* Altura ainda menor para smartphones */
+        margin-bottom: 10px;
+    }
 }
 
 /* Centraliza os elementos na linha */
