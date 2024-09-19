@@ -19,6 +19,13 @@ html {
     background-color: #ff6600;
 }
 
+.navbar-brand {
+    font-family: 'Orbitron', sans-serif; /* Usando Orbitron para combinar com o design */
+    font-size: 1rem; /* Ajuste do tamanho da fonte */
+    color: #fff; /* Cor branca para contraste com o fundo laranja */
+    text-transform: uppercase; /* Para manter um estilo consistente e futurístico */
+    letter-spacing: 2px; /* Espaçamento entre letras para o estilo */
+}
 .navbar-brand, .nav-link {
     color: #fff !important;
 }
