@@ -390,3 +390,16 @@ footer {
 .row > div {
     margin-bottom: 20px;
 }
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%; /* Ajusta a largura dos botões */
+}
+
+.carousel-control-prev {
+    left: -5%; /* Posiciona o botão anterior mais à esquerda */
+}
+
+.carousel-control-next {
+    right: -5%; /* Posiciona o botão próximo mais à direita */
+}

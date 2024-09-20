@@ -1,68 +1,135 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nossos Certificados e Carreira</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome para ícones -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
-    <!-- AOS CSS para animações -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-    <!-- Estilos Personalizados -->
-    <link rel="stylesheet" href="estilo.css">
-    <link rel="icon" href="img/logoF.jpg" type="image/x-icon" loading="lazy">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nossos Certificados e Carreira</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Font Awesome para ícones -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+        <!-- AOS CSS para animações -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+        <!-- Estilos Personalizados -->
+        <link rel="stylesheet" href="estilo.css">
+        <link rel="icon" href="img/logoF.jpg" type="image/x-icon" loading="lazy">
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    </head>
 <body>
+    <nav class=" navbar navbar-expand-lg">
+
+
+        <div class="container-fluid">
+            <!-- Aqui usamos a classe `d-flex` para criar um contêiner flexível -->
+            <a class="navbar-brand" href="#">Nexus Tech</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Adicione `ms-auto` aqui para empurrar os itens de navegação para a esquerda -->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobrenos.html">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <!-- Seção de Certificados -->
     <section class="container mt-5" data-aos="fade-up">
         <h2 class="text-center">Nossos Certificados</h2>
-        <div class="row">
-            <!-- Card 1 -->
-            <div class="col-md-4 mb-4">
-                <div class="card h-100">
-                    <img src="img/certificado1.jpg" class="card-img-top" alt="Certificado 1">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Certificação AWS</h5>
-                        <p class="card-text">Certificado de competência em soluções de cloud computing AWS.</p>
+    
+        <!-- Carousel -->
+        <div id="certificadosCarousel" class="carousel slide mt-5" data-bs-ride="carousel">
+            <div class="carousel-inner">
+    
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100">
+                                <img src="img/Diploma-Faculdade.png" class="card-img-top" alt="Certificado 1">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Certificação Análise e Desenvolvimento de Sistemas</h5>
+                                    <p class="card-text">Certificado de conclusão de graduação.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100">
+                                <img src="img/Imersão Mikrotik.png" class="card-img-top" alt="Certificado 2">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Certificação Cisco</h5>
+                                    <p class="card-text">Especialista em redes com certificação Cisco.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100">
+                                <img src="img/Curso Desenvolvedor Front-End - CPS.png" class="card-img-top" alt="Certificado 3">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Certificado Front-End</h5>
+                                    <p class="card-text">Desenvolvedor Full Stack com competência em tecnologias web.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- Card 2 -->
-            <div class="col-md-4 mb-4">
-                <div class="card h-100">
-                    <img src="img/certificado2.jpg" class="card-img-top" alt="Certificado 2">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Certificação Cisco</h5>
-                        <p class="card-text">Especialista em redes com certificação Cisco.</p>
+    
+                <!-- Slide 2 (Adicione mais slides aqui, se necessário) -->
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100">
+                                <img src="img/certificado1.jpg" class="card-img-top" alt="Certificado 1">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Outro Certificado</h5>
+                                    <p class="card-text">Descrição do certificado adicional.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Adicione mais cards aqui se necessário -->
                     </div>
                 </div>
+    
             </div>
-            <!-- Card 3 -->
-            <div class="col-md-4 mb-4">
-                <div class="card h-100">
-                    <img src="img/certificado3.jpg" class="card-img-top" alt="Certificado 3">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Certificado Full Stack</h5>
-                        <p class="card-text">Desenvolvedor Full Stack com competência em tecnologias web.</p>
-                    </div>
-                </div>
-            </div>
+    
+            <!-- Controles do Carrossel -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#certificadosCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#certificadosCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Próximo</span>
+            </button>
         </div>
     </section>
+    
 
     <!-- Seção de Carreira Profissional -->
     <section class="container mt-5" data-aos="fade-up">
         <h2 class="text-center">Carreira Profissional</h2>
-        <div class="row">
+        <div class="row mt-5">
             <!-- Card 1: Primeiro Emprego -->
             <div class="col-md-4 mb-4">
                 <div class="card h-100">
                     <div class="card-body text-center">
                         <i class="fas fa-laptop-code fa-3x mb-3"></i>
-                        <h5 class="card-title">Desenvolvedor Júnior</h5>
-                        <p class="card-text">Início da carreira como desenvolvedor júnior em empresa de TI focada em desenvolvimento web.</p>
+                        <h5 class="card-title">Analista de Sistemas</h5>
+                        <p class="card-text">Preencher</p>
                     </div>
                 </div>
             </div>
@@ -71,8 +138,8 @@
                 <div class="card h-100">
                     <div class="card-body text-center">
                         <i class="fas fa-code fa-3x mb-3"></i>
-                        <h5 class="card-title">Desenvolvedor Full Stack</h5>
-                        <p class="card-text">Experiência adquirida como desenvolvedor Full Stack em grandes projetos.</p>
+                        <h5 class="card-title">Analista NOC</h5>
+                        <p class="card-text">Preencher</p>
                     </div>
                 </div>
             </div>
@@ -81,8 +148,8 @@
                 <div class="card h-100">
                     <div class="card-body text-center">
                         <i class="fas fa-globe fa-3x mb-3"></i>
-                        <h5 class="card-title">Consultor Internacional</h5>
-                        <p class="card-text">Atuação como consultor de tecnologia em projetos internacionais.</p>
+                        <h5 class="card-title">Desenvolvedor</h5>
+                        <p class="card-text">preencher</p>
                     </div>
                 </div>
             </div>
