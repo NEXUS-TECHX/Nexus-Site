@@ -399,3 +399,11 @@ footer {
 .carousel-control-next {
     right: -5%; /* Posiciona o botão próximo mais à direita */
 }
+
+.d-inline-block {
+    display: inline-block;
+    vertical-align: top;
+    width: 45%; /* Ajuste o tamanho conforme necessário */
+    margin-right: 20px; /* Espaçamento entre as colunas */
+  }
+  
