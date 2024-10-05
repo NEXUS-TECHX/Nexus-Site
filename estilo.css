@@ -406,4 +406,57 @@ footer {
     width: 45%; /* Ajuste o tamanho conforme necessário */
     margin-right: 20px; /* Espaçamento entre as colunas */
   }
-  
+
+  /* Tema claro */
+/* Tema claro */
+body.light-theme {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+.navbar.light-theme {
+    background-color: #007bff;
+}
+
+.jumbotron.light-theme {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Mais estilos para o tema claro */
+
+
+.glitch-title.light-theme, .glitch-subtitle.light-theme, .glitch-button.light-theme {
+    color: #000; /* Altere a cor dos textos e botões */
+}
+
+.instagram-container.light-theme {
+    background-color: #e9ecef;
+}
+
+/* Mais estilos para tema claro */
+
+/* Remove o padding extra e ajusta o tamanho do botão */
+#toggle-theme {
+    padding: 0.375rem 0.75rem; /* Mesma altura dos links de navegação */
+    margin-left: 0.5rem; /* Espaçamento à esquerda */
+}
+
+/* Ajuste de alinhamento para o ícone */
+.navbar-nav .nav-item .btn {
+    display: flex;
+    align-items: center;
+}
+
+/* Remove borda e mantém a transição */
+#toggle-theme {
+    border: none; /* Remove borda padrão */
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* Ajustes adicionais para hover */
+#toggle-theme:hover {
+    transform: scale(1.1); /* Aumenta levemente ao passar o mouse */
+}
